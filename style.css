@@ -1,0 +1,105 @@
+h1{
+    font-family: "Montserrat";
+    font-weight: 500;
+    font-size: 28px;
+    color: #000000;
+}
+
+h2{
+    font-family: "Montserrat";
+    font-weight: 500;
+    font-size: 16px;
+    color: #000000;
+}
+
+.text{
+    font-family: "Montserrat";
+    font-weight: 300;
+    font-size: 16px;
+    color: #8B8B8B;
+}
+
+button{
+    color: #FFFFFF;
+    font-family: "Montserrat";
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.description{
+    font-family: "Montserrat";
+    font-weight: 300;
+    font-size: 13px;
+    color: #8B8B8B;
+}
+
+.travels{
+    width: 500px;
+    height: 1660px;
+    background-color: #FAFAFA;
+    margin: 20px auto;
+}
+
+.traveler{
+    width: 350px;
+    height: 290px;
+    margin: 60px 75px 40px 75px;
+}
+
+h1{
+    text-align: center;
+    margin-bottom: 40px;
+    font-weight: bolder;
+}
+
+.text{
+    text-align: center;
+    margin: 15px 20px 30px 20px;
+}
+
+.popisek{
+    margin-top: 40px;
+}
+
+.button{
+    display: block;
+   padding: 11px 30px;
+   border-radius: 20px;
+   color: #FFFFFF;
+   border: none;
+   margin: 10px auto;
+}
+
+.blue{
+    background-color: #407BFF;
+}
+
+.grey{
+    background-color: #8B8B8B;
+}
+
+h2{
+    margin-top: 60px;
+    margin-bottom: 15px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.icone{
+    background-color: #FFFFFF;
+    border: none;
+    border-radius: 10px;
+    margin: 15px 20px;
+    height: 80px;
+}
+
+.picture{
+    margin: 20px 30px 20px 20px;
+    display: inline;
+}
+
+.description{
+    display: inline-block;
+    text-align: center;
+    margin: 30px 20px 20px 30px;
+}
