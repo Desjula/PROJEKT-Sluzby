@@ -1,188 +1,263 @@
-h1{
-    font-family: "Montserrat";
-    font-weight: 500;
-    font-size: 28px;
-    color: #000000;
-}
-
-h2{
-    font-family: "Montserrat";
-    font-weight: 500;
-    font-size: 16px;
-    color: #000000;
-}
-
-.text{
-    font-family: "Montserrat";
-    font-weight: 300;
-    font-size: 16px;
-    color: #8B8B8B;
-}
-
-button{
-    color: #FFFFFF;
-    font-family: "Montserrat";
-    font-weight: 400;
-    font-size: 14px;
-}
-
-.description{
-    font-family: "Montserrat";
-    font-weight: 300;
-    font-size: 13px;
-    color: #8B8B8B;
-}
+*, :after, :before { box-sizing: border-box; }
 
 .travels{
-    width: 500px;
-    height: 1660px;
-    background-color: #FAFAFA;
-    margin: 20px auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 675px  repeat(2, 1fr);
+    
+    
+    grid-template-areas: 
+    "uvod"
+    "polozky1"
+    "polozky2"
 }
 
-.traveler{
-    width: 350px;
-    height: 290px;
-    margin: 60px 75px 40px 75px;
-}
+.uvod { grid-area: uvod; }
+.polozky1 { grid-area: polozky1; }
+.polozky2 { grid-area: polozky2; }
 
-h1{
-    text-align: center;
-    margin-bottom: 40px;
-    font-weight: bolder;
-}
 
-.text{
-    text-align: center;
-    margin: 15px 20px 30px 20px;
-}
-
-.popisek{
-    margin-top: 40px;
-}
-
-.button{
-    display: block;
-   padding: 11px 30px;
-   border-radius: 20px;
-   color: #FFFFFF;
-   border: none;
-   margin: 10px auto;
-}
-
-.blue{
-    background-color: #407BFF;
-}
-
-.grey{
-    background-color: #8B8B8B;
-}
-
-h2{
-    margin-top: 60px;
-    margin-bottom: 15px;
-    text-align: center;
-    font-weight: bold;
-}
-
-.icone{
-    background-color: #FFFFFF;
-    border: none;
-    border-radius: 10px;
-    margin: 15px 20px;
-    height: 80px;
-}
-
-.picture{
-    margin: 20px 30px 20px 20px;
-    display: inline;
-}
-
-.description{
-    display: inline-block;
-    text-align: center;
-    margin: 30px 20px 20px 30px;
+.uvod{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 350px 80px 125px 120px;
+    grid-template-areas: 
+    "picture"
+    "header1"
+    "text1"
+    "buttons"
 }
 
 @media only screen and (min-width: 640px) {
     .travels{
-        width: 768px;
-        height: 1461px;
-        background-color: #FAFAFA;
-        margin: 20px auto;
-    }
-    
-    .traveler{
-        width: 400px;
-        height: 332px;
-        margin: 60px 185px 30px 185px;
-    }
-    
-    .text{
-        text-align: center;
-        margin: 15px 109px 30px 109px;
-    }
-    
-    .popisek{
-        margin-top: 40px;
-    }
-    
-    .button{
-       display: inline-block;
-       padding: 11px 30px;
-       border-radius: 20px;
-       color: #FFFFFF;
-       border: none;
-       margin: 30px 10px 80px 10px;
-    }
-    
-    .blue{
-        background-color: #407BFF;
-        margin-left: 167px;
-    }
-    
-    .grey{
-        background-color: #8B8B8B;
-        margin-right: 167px;
-    }
-    
-    h2{
-        margin-top: 0px;
-        margin-bottom: 15px;
-        text-align: center;
-        font-weight: bold;
-    }
-    
-    .three-icones{
-        display: flex;
+        grid-template-rows: 645px  repeat(2, 1fr);
     }
 
-    .icone{
-        background-color: #FFFFFF;
-        border: none;
-        border-radius: 10px;
-        margin: 0px 10px 80px 10px;
-        width: 230px;
-        height: 172px;
+    .uvod{
+        grid-template-rows: 390px 80px 105px 70px;
+        grid-template-areas: 
+        "picture"
+        "header1"
+        "text1"
+        "buttons"
+    }
+}
+
+@media only screen and (min-width: 1100px) {
+    .travels{
+        grid-template-rows: 410px  repeat(2, 1fr);
     }
 
-    .one{
-        margin-left: 20px;
+    .uvod{
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 170px 105px 70px 65px;
     }
-    
-    .three{
-        margin-right: 20px;
-    }
+}
 
+.picture { grid-area: picture; }
+.header1 { grid-area: header1; }
+.text1 { grid-area: text1; }
+.buttons { grid-area: buttons; }
+
+
+
+.polozky1{
+    display: grid;
+    margin-top: 60px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 20px 85px repeat(3, 95px);
+    grid-template-areas:
+    "header2"
+    "text2"
+    "prvni"
+    "druha"
+    "treti"
+}
+
+@media only screen and (min-width: 640px) {
+    .polozky1{
+        margin-top: 80px;
+        grid-template-rows: 20px 60px 210px;
+        grid-template-areas:
+        "tri-polozky header2"   
+    }
+}
+
+@media only screen and (min-width: 1100px) {
+    .polozky1{
+        grid-template-columns: 50% calc(50% - 60px);
+        grid-template-areas:
+        "header2"
+        "text2"
+        "polozka"
+    }
+}
+
+
+
+.header2 { grid-area: header2; }
+.text2 { grid-area: text2; }
+.prvni { grid-area: prvni; }
+.druha { grid-area: druha; }
+.treti { grid-area: treti; }
+.tri-polozky { grid-area: tri-polozky; }
+.polozka { grid-area: polozka; }
+
+
+
+
+
+body{
+    padding: 0;
+    margin: 0;
+}
+
+.travels{
+    padding: 20px;
+    background-color: #FAFAFA;
+}
+
+.picture{
+    width: 350px;
+    height: 290px;
+    margin: 60px auto 0 auto;
+}
+
+.header1{
+    font-family: sans-serif;
+    font-size: 28px;
+    margin: 40px 0 0 0;
+    text-align: center;
+}
+
+.text1{
+    font-family: sans-serif;
+    font-size: 16px;
+    color: #8B8B8B;
+    text-align: center;
+    margin: 40px 20px 0 20px;
+}
+
+.button{
+    text-align: center;
+    color: #FFFFFF;
+    font-family: sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    display: block;
+    padding: 10px 30px;
+    border-radius: 20px;
+    margin: 0 auto 0 auto;
+    border: none;
+}
+
+.-g{
+    background-color: #8B8B8B;
+    margin-top: 10px;
+}
+
+.-b{
+    background-color: #407BFF;
+    margin-top: 30px;
+}
+
+
+@media only screen and (min-width: 640px) {
     .picture{
-        margin: 40px 92px 20px 92px;
-        display: inline;
+        width: 400px;
+        height: 330px;
     }
-    
-    .description{
-        display: inline-block;
-        text-align: center;
-        margin: 0px 15px 20px 15px;
+
+    .header1{
+        margin-top: 30px;
     }
+
+    .text1{
+        width: 550px;
+        margin: 40px auto 0 auto;
+    }
+
+    .buttons{
+        display: flex;
+        margin-top: 30px;
+        justify-content: center;
+    }
+
+    .-b{
+        margin: 0 10px 0 0;
+    }
+
+    .-g{
+        margin: 0 0 0 10px;
+    }
+}
+
+
+@media only screen and (min-width: 1100px) {
+    .picture{
+        width: 425px;
+        height: 350px;
+        grid-column: 2;
+    }
+
+    .header1{
+        margin-top: 130px;
+        grid-row: 1;
+        grid-column: 1;
+    }
+
+    .text1{
+        width: 500px;
+        grid-row: 2;
+        grid-column: 1;
+
+    }
+
+    .buttons{
+        grid-row: 3;
+        grid-column: 1;
+    }
+}
+
+
+
+
+.jedna{
+    width: 40px;
+    height: 40px;
+}
+
+.dve{
+    width: 45px;
+    height: 40px;
+}
+
+.header2{
+    margin: 0;
+    font-family: sans-serif;
+    font-size: 16px;
+}
+
+.text2{
+    margin: 15px 20px 0 20px;
+
+}
+
+
+.tri-polozky{
+    display: flex;
+    justify-content: space-between;
+}
+
+.polozka{
+    width: calc((100% - 40px) / 3);
+}
+
+.prvni{
+    margin: 30px 0 0 0;
+}
+
+.druha{
+    margin: 15px 0 0 0
 }
 
